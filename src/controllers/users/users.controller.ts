@@ -5,6 +5,7 @@ import { UsersService } from '../../services/users/users.service';
 export class UsersController {
   constructor(private readonly usersService: UsersService) {}
 
+  @UseGuards()
   @Post('')
   register(@Body() Body) {
     return this.usersService.register(Body);
