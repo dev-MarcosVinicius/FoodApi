@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { UsersService } from '../users/users.service';
 import { JwtService } from '@nestjs/jwt';
 import { CryptoUtil } from 'src/shared/util/crypto.util';
@@ -27,8 +27,8 @@ export class AuthService {
       number: 1
     });
 
-    console.log(user);
-    // access_token = this.jwtService.sign(user);
+    if (!user) throw new HttpException('Forbidden', HttpStatus.FORBIDDEN);
+
     return user;
   }
 }
