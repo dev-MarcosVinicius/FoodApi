@@ -6,3 +6,8 @@ export type UserProps = {
     addres: string;
     number: string;
 }
+
+export type userLogin = {
+    email: string;
+    password: string;
+}
