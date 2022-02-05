@@ -20,6 +20,7 @@ export class AuthService {
 
   async login(userData: userLogin): Promise<UserProps> {
     const user = await this.usersService.findOne(userData.email, {
+      id: 1,
       fullName: 1,
       email: 1,
       celPhone: 1,
