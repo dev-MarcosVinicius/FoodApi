@@ -30,6 +30,12 @@ export class Product {
     required: true
   })
   imageUrl: string;
+
+  @Prop({
+    default: true
+  })
+  actived: boolean;
+
 }
 
 export const ProductSchema = SchemaFactory.createForClass(Product);

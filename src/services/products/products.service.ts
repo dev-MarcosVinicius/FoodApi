@@ -13,4 +13,8 @@ export class ProductsService {
     async register(productData: CreateProductDto) {
         return await this.productModel.create(productData);
     }
+
+    async findAll() {
+        return await this.productModel.find({actived: true});
+    }
 }
