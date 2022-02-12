@@ -36,6 +36,8 @@ export class Product {
   })
   actived: boolean;
 
+  @Prop({})
+  category: string;
 }
 
 export const ProductSchema = SchemaFactory.createForClass(Product);

@@ -5,13 +5,15 @@ import { AppService } from '../services/app.service';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { ProductsModule } from './products/products.module';
+import { CategoriesModule } from './categories/categories.module';
 
 @Module({
   imports: [
     UsersModule,
     MongooseModule.forRoot('mongodb://food-db:food-db@mongo-db:27017/food-db?authSource=admin'),
     AuthModule,
-    ProductsModule
+    ProductsModule,
+    CategoriesModule
   ],
   controllers: [AppController],
   providers: [AppService],
