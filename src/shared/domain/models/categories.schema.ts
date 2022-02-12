@@ -8,6 +8,11 @@ export class Category {
   @Prop({
     required: true
   })
+  id: string;
+
+  @Prop({
+    required: true
+  })
   title: string;
 
   @Prop({
